@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+.active-nav {
+  @apply text-[#404040] text-base hover:text-white
+    hover:cursor-pointer relative before:content-[''] before:absolute before:block before:w-full before:h-[3px] before:rounded-t
+    before:-bottom-5 before:left-0 before:bg-white
+    before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+    before:transition before:ease-in-out before:duration-300;
+}
+
+.active-nav.active {
+  @apply font-semibold text-white before:scale-x-100 transition-all hover:transition-all;
+}
+
+html,
+body {
+  @apply bg-black;
+}
