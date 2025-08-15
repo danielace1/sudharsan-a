@@ -1,7 +1,6 @@
-import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function StunningNav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,13 +15,13 @@ export default function StunningNav() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 px-10 py-4 transition-all duration-300 overflow-hidden ${
+      className={`fixed top-0 w-full z-50 px-6 md:px-10 py-4 overflow-hidden transition-all duration-300
+      ${
         scrolled
-          ? "bg-black/60 backdrop-blur-xl border-b border-white/10 shadow-lg"
-          : "bg-gradient-to-b from-black/60 to-transparent backdrop-blur-md"
+          ? "bg-black/40 backdrop-blur-2xl border-b border-white/10 shadow-[0_0_20px_rgba(0,245,255,0.3)]"
+          : "bg-black/20 backdrop-blur-md"
       }`}
     >
-      {/* Animated background gradient */}
       <motion.div
         className="absolute inset-0 opacity-30 blur-3xl"
         animate={{
@@ -40,22 +39,22 @@ export default function StunningNav() {
       />
 
       <div className="flex justify-between items-center relative z-10">
-        {/* Shimmer Logo */}
-        <motion.span
-          className="text-3xl font-bold bg-gradient-to-r from-[#b8b8b8] via-white to-[#b8b8b8] bg-[length:200%_auto] text-transparent bg-clip-text drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]"
-          animate={{ backgroundPosition: ["200% center", "-200% center"] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
-        >
-          Sudharsan
-        </motion.span>
+        <NavLink to="/">
+          <motion.span
+            className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#b8b8b8] via-white to-[#b8b8b8] bg-[length:200%_auto] text-transparent bg-clip-text drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]"
+            animate={{ backgroundPosition: ["200% center", "-200% center"] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+          >
+            Sudharsan
+          </motion.span>
+        </NavLink>
 
-        {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((item) => (
             <li key={item}>
               <NavLink
                 to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className={`active-nav`}
+                className="active-nav"
               >
                 {item}
               </NavLink>
@@ -65,43 +64,66 @@ export default function StunningNav() {
 
         {/* Mobile Menu */}
         <button
-          className="md:hidden text-gray-300 hover:text-white transition"
-          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden relative w-2 h-2 flex items-center justify-center"
+          onClick={() => setMenuOpen((prev) => !prev)}
         >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          <motion.span
+            className="absolute h-[3px] w-6 bg-white rounded"
+            animate={{
+              rotate: menuOpen ? 45 : 0,
+              y: menuOpen ? 0 : -7,
+            }}
+            transition={{ duration: 0.3 }}
+          />
+          <motion.span
+            className="absolute h-[3px] w-6 bg-white rounded"
+            animate={{
+              opacity: menuOpen ? 0 : 1,
+            }}
+            transition={{ duration: 0.3 }}
+          />
+          <motion.span
+            className="absolute h-[3px] w-6 bg-white rounded"
+            animate={{
+              rotate: menuOpen ? -45 : 0,
+              y: menuOpen ? 0 : 7,
+            }}
+            transition={{ duration: 0.3 }}
+          />
         </button>
       </div>
 
-      {/* Mobile Drawer */}
-      {menuOpen && (
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: "auto", opacity: 1 }}
-          exit={{ height: 0, opacity: 0 }}
-          transition={{ duration: 0.4 }}
-          className="md:hidden bg-black/90 backdrop-blur-lg mt-4 rounded-lg p-4 border border-white/10 shadow-lg"
-        >
-          <ul className="flex flex-col gap-4 text-gray-300">
-            {navLinks.map((item) => (
-              <li key={item}>
-                <NavLink
-                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  className={({ isActive }) =>
-                    `block py-1 font-semibold ${
-                      isActive
-                        ? "text-white active-nav active"
-                        : "text-gray-300 active-nav"
-                    }`
-                  }
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="md:hidden bg-black/90 backdrop-blur-lg mt-4 rounded-lg p-4 border border-white/10 shadow-lg"
+          >
+            <ul className="flex flex-col gap-4 text-gray-300">
+              {navLinks.map((item) => (
+                <li key={item}>
+                  <NavLink
+                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    className={({ isActive }) =>
+                      `block py-1 font-semibold ${
+                        isActive
+                          ? "text-white active-nav active"
+                          : "text-gray-300 active-nav"
+                      }`
+                    }
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
