@@ -15,7 +15,7 @@ export default function StunningNav() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 px-6 md:px-10 py-4 overflow-hidden transition-all duration-300
+      className={`fixed top-0 w-full z-50 px-6 md:px-10 py-4 overflow-hidden transition-all duration-300 
       ${
         scrolled
           ? "bg-black/40 backdrop-blur-2xl border-b border-white/10 shadow-[0_0_20px_rgba(0,245,255,0.3)]"
@@ -38,7 +38,7 @@ export default function StunningNav() {
         }}
       />
 
-      <div className="flex justify-between items-center relative z-10">
+      <div className="container 2xl:mx-auto flex justify-between items-center relative z-10">
         <NavLink to="/">
           <motion.span
             className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#b8b8b8] via-white to-[#b8b8b8] bg-[length:200%_auto] text-transparent bg-clip-text drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]"

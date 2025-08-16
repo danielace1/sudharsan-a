@@ -1,8 +1,17 @@
-[
-  {
-    "home": {
-      "title": "I build things for the web",
-      "description": "Full-stack developer passionate about building scalable and modern web applications. Experienced in JavaScript, React, Node.js, and backend technologies. Always learning and improving."
+{
+  "profile": {
+    "name": "Sudharsan",
+    "role": "Full-Stack Developer",
+    "description": "I’m a Full-Stack Developer passionate about building modern and user-friendly web applications. I love turning ideas into smooth digital experiences."
+  },
+  "buttons": {
+    "work": {
+      "label": "Explore My Work",
+      "link": "#work"
+    },
+    "contact": {
+      "label": "Let’s Connect",
+      "link": "#contact"
     }
   }
-]
+}
