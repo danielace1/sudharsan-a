@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import ThemeSwitch from "./ThemeSwitch";
 
 export default function StunningNav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,8 +19,8 @@ export default function StunningNav() {
       className={`fixed top-0 w-full z-50 px-6 md:px-10 py-4 overflow-hidden transition-all duration-300 
       ${
         scrolled
-          ? "bg-black/40 backdrop-blur-2xl border-b border-white/10 shadow-[0_0_20px_rgba(0,245,255,0.3)]"
-          : "bg-black/20 backdrop-blur-md"
+          ? "bg-white/80 dark:bg-black/40 backdrop-blur-2xl border-b border-gray-200 dark:border-white/10 shadow-lg dark:shadow-[0_0_20px_rgba(0,245,255,0.3)]"
+          : "bg-white/60 dark:bg-black/20 backdrop-blur-md"
       }`}
     >
       <motion.div
@@ -41,34 +42,37 @@ export default function StunningNav() {
       <div className="container 2xl:mx-auto flex justify-between items-center relative z-10">
         <NavLink to="/">
           <motion.span
-            className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#b8b8b8] via-white to-[#b8b8b8] bg-[length:200%_auto] text-transparent bg-clip-text drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]"
+            className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gray-600 via-gray-900 to-gray-600 dark:from-[#b8b8b8] dark:via-white dark:to-[#b8b8b8] bg-[length:200%_auto] text-transparent bg-clip-text drop-shadow-[0_0_10px_rgba(0,0,0,0.3)] dark:drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]"
             animate={{ backgroundPosition: ["200% center", "-200% center"] }}
             transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
           >
-            Sudharsan
+            SD
           </motion.span>
         </NavLink>
 
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((item) => (
-            <li key={item}>
-              <NavLink
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="active-nav"
-              >
-                {item}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center gap-8">
+            {navLinks.map((item) => (
+              <li key={item}>
+                <NavLink
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  className="active-nav"
+                >
+                  {item}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+          <ThemeSwitch />
+        </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Button */}
         <button
           className="md:hidden relative w-2 h-2 flex items-center justify-center"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
           <motion.span
-            className="absolute h-[3px] w-6 bg-white rounded"
+            className="absolute h-[3px] w-6 bg-gray-900 dark:bg-white rounded"
             animate={{
               rotate: menuOpen ? 45 : 0,
               y: menuOpen ? 0 : -7,
@@ -76,14 +80,14 @@ export default function StunningNav() {
             transition={{ duration: 0.3 }}
           />
           <motion.span
-            className="absolute h-[3px] w-6 bg-white rounded"
+            className="absolute h-[3px] w-6 bg-gray-900 dark:bg-white rounded"
             animate={{
               opacity: menuOpen ? 0 : 1,
             }}
             transition={{ duration: 0.3 }}
           />
           <motion.span
-            className="absolute h-[3px] w-6 bg-white rounded"
+            className="absolute h-[3px] w-6 bg-gray-900 dark:bg-white rounded"
             animate={{
               rotate: menuOpen ? -45 : 0,
               y: menuOpen ? 0 : 7,
@@ -100,9 +104,9 @@ export default function StunningNav() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="md:hidden bg-black/90 backdrop-blur-lg mt-4 rounded-lg p-4 border border-white/10 shadow-lg"
+            className="md:hidden bg-white/90 dark:bg-black/90 backdrop-blur-lg mt-4 rounded-lg p-4 border border-gray-200 dark:border-white/10 shadow-lg"
           >
-            <ul className="flex flex-col gap-4 text-gray-300">
+            <ul className="flex flex-col gap-4">
               {navLinks.map((item) => (
                 <li key={item}>
                   <NavLink
@@ -110,8 +114,8 @@ export default function StunningNav() {
                     className={({ isActive }) =>
                       `block py-1 font-semibold ${
                         isActive
-                          ? "text-white active-nav active"
-                          : "text-gray-300 active-nav"
+                          ? "text-gray-900 dark:text-white active-nav active"
+                          : "text-gray-600 dark:text-gray-300 active-nav"
                       }`
                     }
                     onClick={() => setMenuOpen(false)}
@@ -120,6 +124,9 @@ export default function StunningNav() {
                   </NavLink>
                 </li>
               ))}
+              <li className="mt-4">
+                <ThemeSwitch />
+              </li>
             </ul>
           </motion.div>
         )}
