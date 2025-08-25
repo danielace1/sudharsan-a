@@ -1,37 +1,22 @@
-import * as motion from "motion/react-client";
+import { motion } from "framer-motion";
+import { Canvas } from "@react-three/fiber";
 import { Briefcase, Mail } from "lucide-react";
+import ParallaxStars from "../components/ParallaxStars";
 import data from "../data/data.json";
+import GradientBackground from "../components/GradientBackground";
 
 const Home = () => {
   return (
     <div className="relative min-h-screen bg-white dark:bg-black text-black dark:text-white flex flex-col justify-center items-center px-4 sm:px-6 md:px-12 lg:px-20 overflow-hidden">
-      {/* Background Animated Blobs */}
-      <motion.div
-        animate={{ scale: [1, 1.2, 1], opacity: [0.25, 0.5, 0.25] }}
-        transition={{ duration: 8, repeat: Infinity }}
-        className="absolute -top-40 -left-40 w-72 h-72 sm:w-96 sm:h-96 rounded-full 
-             bg-cyan-300 
-             blur-[100px] sm:blur-[120px] 
-             opacity-80 dark:opacity-25"
-      />
+      <div className="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-700">
+        <Canvas camera={{ position: [0, 0, 3], fov: 75 }}>
+          <ParallaxStars />
+        </Canvas>
+      </div>
 
-      <motion.div
-        animate={{ scale: [1.2, 1, 1.2], opacity: [0.25, 0.5, 0.25] }}
-        transition={{ duration: 10, repeat: Infinity }}
-        className="absolute -bottom-32 -right-32 w-80 h-80 sm:w-[28rem] sm:h-[28rem] rounded-full 
-             bg-pink-300 
-             blur-[100px] sm:blur-[140px] 
-             opacity-80 dark:opacity-25"
-      />
-
-      <motion.div
-        animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
-        transition={{ duration: 12, repeat: Infinity }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[20rem] h-[20rem] sm:w-[28rem] sm:h-[28rem] md:w-[32rem] md:h-[32rem] rounded-full 
-            bg-purple-300 
-             blur-[120px] sm:blur-[160px] 
-             opacity-80 dark:opacity-25"
-      />
+      <div className="absolute inset-0 dark:hidden transition-opacity duration-700">
+        <GradientBackground />
+      </div>
 
       {/* Home Content */}
       <motion.div
@@ -40,7 +25,6 @@ const Home = () => {
         transition={{ duration: 1 }}
         className="text-center z-10"
       >
-        {/* Profile Pic with rotating border */}
         <div className="container 2xl:mx-auto relative w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-48 lg:h-48 mx-auto mb-6">
           <motion.div
             animate={{ rotate: 360 }}
@@ -57,8 +41,7 @@ const Home = () => {
           />
         </div>
 
-        {/* Name */}
-        <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold leading-snug">
+        <h1 className="my-3">
           <motion.span
             className="text-2xl md:text-5xl font-bold bg-gradient-to-r from-gray-600 via-gray-900 to-gray-600 dark:from-[#b8b8b8] dark:via-white dark:to-[#b8b8b8] bg-[length:200%_auto] text-transparent bg-clip-text drop-shadow-[0_0_4px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]"
             animate={{ backgroundPosition: ["200% center", "-200% center"] }}
@@ -68,7 +51,6 @@ const Home = () => {
           </motion.span>
         </h1>
 
-        {/* Description */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -99,7 +81,6 @@ const Home = () => {
         </motion.p>
       </motion.div>
 
-      {/* Buttons */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -108,15 +89,27 @@ const Home = () => {
       >
         <a
           href={data.buttons.work.link}
-          className="flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-semibold shadow-md hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300"
+          className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20"
         >
-          <Briefcase className="w-5 h-5" /> {data.buttons.work.label}
+          <Briefcase className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-1" />
+          {data.buttons.work.label}
         </a>
+
         <a
           href={data.buttons.contact.link}
-          className="flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-xl border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-cyan-400 hover:text-cyan-400 dark:hover:text-cyan-300 font-medium hover:scale-105 transition-all duration-300"
+          className="group flex items-center justify-center gap-2 px-6 py-3 
+               rounded-full 
+               bg-white/10 dark:bg-black/10 
+               backdrop-blur-md 
+               border border-gray-200 dark:border-gray-700 
+               text-gray-800 dark:text-gray-200 
+               font-medium 
+               shadow-md 
+               transition-all duration-300 
+               hover:scale-105 hover:border-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300"
         >
-          <Mail className="w-5 h-5" /> {data.buttons.contact.label}
+          <Mail className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" />
+          {data.buttons.contact.label}
         </a>
       </motion.div>
     </div>

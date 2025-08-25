@@ -16,7 +16,7 @@ export default function StunningNav() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 px-6 md:px-10 py-4 overflow-hidden transition-all duration-300 
+      className={`fixed top-0 w-full z-50 px-6 md:px-10 py-4 overflow-hidden transition-all duration-300 border-b border-b-gray-200 dark:border-b-gray-900
       ${
         scrolled
           ? "bg-white/80 dark:bg-black/40 backdrop-blur-2xl border-b border-gray-200 dark:border-white/10 shadow-lg dark:shadow-[0_0_20px_rgba(0,245,255,0.3)]"
@@ -46,7 +46,7 @@ export default function StunningNav() {
             animate={{ backgroundPosition: ["200% center", "-200% center"] }}
             transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
           >
-            SD
+            {"</SD >"}
           </motion.span>
         </NavLink>
 
