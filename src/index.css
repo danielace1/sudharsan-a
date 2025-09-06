@@ -4,11 +4,12 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   @apply bg-white dark:bg-black text-black dark:text-white transition-colors duration-300;
 }
 
 .active-nav {
-  @apply relative text-base font-medium text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all duration-300;
+  @apply relative text-base font-medium text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all duration-300 cursor-pointer;
 }
 
 .active-nav::before {

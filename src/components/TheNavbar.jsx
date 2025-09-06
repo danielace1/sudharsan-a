@@ -1,18 +1,13 @@
-import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 import ThemeSwitch from "./ThemeSwitch";
 
-export default function StunningNav() {
+const TheNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState("home");
   const navLinks = ["Home", "About", "Skills", "Projects", "Contact"];
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <nav
@@ -40,7 +35,13 @@ export default function StunningNav() {
       />
 
       <div className="container 2xl:mx-auto flex justify-between items-center relative z-10">
-        <NavLink to="/">
+        <ScrollLink
+          to="home"
+          smooth={true}
+          duration={600}
+          offset={-70}
+          className="cursor-pointer"
+        >
           <motion.span
             className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gray-600 via-gray-900 to-gray-600 dark:from-[#b8b8b8] dark:via-white dark:to-[#b8b8b8] bg-[length:200%_auto] text-transparent bg-clip-text drop-shadow-[0_0_10px_rgba(0,0,0,0.3)] dark:drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]"
             animate={{ backgroundPosition: ["200% center", "-200% center"] }}
@@ -48,20 +49,28 @@ export default function StunningNav() {
           >
             {"</SD >"}
           </motion.span>
-        </NavLink>
+        </ScrollLink>
 
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex items-center gap-8">
-            {navLinks.map((item) => (
-              <li key={item}>
-                <NavLink
-                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  className="active-nav"
-                >
-                  {item}
-                </NavLink>
-              </li>
-            ))}
+            {navLinks.map((item) => {
+              const id = item.toLowerCase();
+              return (
+                <li key={item}>
+                  <ScrollLink
+                    to={id}
+                    smooth={true}
+                    duration={600}
+                    offset={-70}
+                    spy={true}
+                    onSetActive={() => setActive(id)}
+                    className={`active-nav ${active === id ? "active" : ""}`}
+                  >
+                    {item}
+                  </ScrollLink>
+                </li>
+              );
+            })}
           </ul>
           <ThemeSwitch />
         </div>
@@ -107,23 +116,24 @@ export default function StunningNav() {
             className="md:hidden bg-white/90 dark:bg-black/90 backdrop-blur-lg mt-4 rounded-lg p-4 border border-gray-200 dark:border-white/10 shadow-lg"
           >
             <ul className="flex flex-col gap-4">
-              {navLinks.map((item) => (
-                <li key={item}>
-                  <NavLink
-                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className={({ isActive }) =>
-                      `block py-1 font-semibold ${
-                        isActive
-                          ? "text-gray-900 dark:text-white active-nav active"
-                          : "text-gray-600 dark:text-gray-300 active-nav"
-                      }`
-                    }
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {item}
-                  </NavLink>
-                </li>
-              ))}
+              {navLinks.map((item) => {
+                const id = item.toLowerCase();
+                return (
+                  <li key={item}>
+                    <ScrollLink
+                      to={id}
+                      smooth={true}
+                      duration={600}
+                      offset={-70}
+                      spy={true}
+                      onSetActive={() => setActive(id)}
+                      className={`active-nav ${active === id ? "active" : ""}`}
+                    >
+                      {item}
+                    </ScrollLink>
+                  </li>
+                );
+              })}
               <li className="mt-4">
                 <ThemeSwitch />
               </li>
@@ -133,4 +143,6 @@ export default function StunningNav() {
       </AnimatePresence>
     </nav>
   );
-}
+};
+
+export default TheNavbar;
