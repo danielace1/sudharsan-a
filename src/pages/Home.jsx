@@ -15,7 +15,7 @@ const Home = () => {
         transition={{ duration: 1 }}
         className="text-center z-10"
       >
-        <div className="container 2xl:mx-auto relative w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-48 lg:h-48 mx-auto mt-5 mb-6">
+        <div className="container 2xl:mx-auto relative w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-48 lg:h-48 mx-auto mt-6 mb-6">
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
@@ -33,7 +33,7 @@ const Home = () => {
 
         <h1 className="my-3">
           <motion.span
-            className="text-2xl md:text-5xl font-bold bg-gradient-to-r from-gray-600 via-gray-900 to-gray-600 dark:from-[#b8b8b8] dark:via-white dark:to-[#b8b8b8] bg-[length:200%_auto] text-transparent bg-clip-text drop-shadow-[0_0_4px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-600 via-gray-900 to-gray-600 dark:from-[#b8b8b8] dark:via-white dark:to-[#b8b8b8] bg-[length:200%_auto] text-transparent bg-clip-text drop-shadow-[0_0_4px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]"
             animate={{ backgroundPosition: ["200% center", "-200% center"] }}
             transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
           >
@@ -45,7 +45,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 1 }}
-          className="mt-4 sm:mt-6 md:mt-2 text-gray-600 dark:text-gray-300 text-sm md:text-lg max-w-lg sm:max-w-2xl mx-auto leading-relaxed"
+          className="mt-4 sm:mt-6 md:mt-2 text-gray-600 dark:text-gray-300 text-sm md:text-[17px] lg:text-lg max-w-lg sm:max-w-2xl mx-auto leading-relaxed"
         >
           I’m a{" "}
           <span className="font-semibold text-green-600 dark:text-green-400">
@@ -75,7 +75,7 @@ const Home = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.8 }}
-        className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center z-10"
+        className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-6 justify-center z-10"
       >
         <a
           href={data.buttons.work.link}
@@ -108,7 +108,7 @@ const Home = () => {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="absolute bottom-8 flex flex-col items-center cursor-pointer"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer"
         >
           <ChevronDown className="w-8 h-8 text-cyan-400 dark:text-pink-400 drop-shadow-lg" />
         </motion.div>

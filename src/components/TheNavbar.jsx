@@ -47,7 +47,8 @@ const TheNavbar = () => {
             animate={{ backgroundPosition: ["200% center", "-200% center"] }}
             transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
           >
-            {"</SD >"}
+            <span className="text-[23px]">{"<"}</span>SD
+            <span className="text-[23px]">{"/>"}</span>
           </motion.span>
         </ScrollLink>
 
