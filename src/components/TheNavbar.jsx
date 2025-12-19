@@ -128,6 +128,7 @@ const TheNavbar = () => {
                       offset={-70}
                       spy={true}
                       onSetActive={() => setActive(id)}
+                      onClick={() => setMenuOpen(false)}
                       className={`active-nav ${active === id ? "active" : ""}`}
                     >
                       {item}

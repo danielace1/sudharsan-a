@@ -45,7 +45,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 1 }}
-          className="mt-4 sm:mt-6 md:mt-2 text-gray-600 dark:text-gray-300 text-sm md:text-[17px] lg:text-lg max-w-lg sm:max-w-2xl mx-auto leading-relaxed"
+          className="mt-3 sm:mt-6 md:mt-2 text-gray-600 dark:text-gray-300 text-sm md:text-[17px] lg:text-lg max-w-lg sm:max-w-2xl mx-auto leading-relaxed"
         >
           I’m a{" "}
           <span className="font-semibold text-green-600 dark:text-green-400">

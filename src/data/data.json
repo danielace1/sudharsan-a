@@ -13,5 +13,79 @@
       "label": "Let’s Connect",
       "link": "#contact"
     }
+  },
+
+  "education": [
+    {
+      "title": "B.E - Computer Science and Engineering",
+      "subtitle": "Government College of Engineering, Tirunelveli",
+      "time": "Sep 2023 - Present"
+    },
+    {
+      "title": "Higher Secondary Education",
+      "subtitle": "Rose Mary Matric Hr. Sec. School, Tirunelveli",
+      "time": "June 2020 - Apr 2023"
+    }
+  ],
+  "experience": [
+    {
+      "title": "JavaScript Full-Stack Engineer Intern",
+      "mode": "(Remote)",
+      "companylink": "https://cyberdudenetworks.com/",
+      "subtitle": "Cyberdude Networks Pvt. Ltd.",
+      "time": "Sep 2023 - Feb 2024",
+      "points": [
+        "Learned full-stack development using the MERN stack",
+        "Built a complete MERN application",
+        "Designed responsive UI applications",
+        "Secured 3rd place in a team hackathon (Job Portal - CRUD)"
+      ],
+      "link": "https://github.com/danielace1/cyberdude-challenges"
+    },
+    {
+      "title": "Backend Developer Intern",
+      "mode": "(Remote)",
+      "companylink": "https://www.linkedin.com/company/zen-hook/",
+      "subtitle": "Zen Hook",
+      "time": "Sep 2024 - Nov 2024",
+      "points": [
+        "Developed RESTful APIs using Node.js and MySQL",
+        "Implemented product listing with CRUD functionality",
+        "Contributed to a responsive frontend application",
+        "Deployed and optimized production applications"
+      ],
+      "link": "https://www.jdsinternationalexport.com"
+    }
+  ],
+
+  "skills": {
+    "frontend": [
+      { "name": "HTML", "img": "/skills/html.png" },
+      { "name": "CSS", "img": "/skills/css.png" },
+      { "name": "JavaScript", "img": "/skills/javascript.png" },
+      { "name": "React", "img": "/skills/reactjs.png" },
+      { "name": "Next.js", "img": "/skills/nextjs.webp" },
+      { "name": "Tailwind CSS", "img": "/skills/tailwindcss.png" }
+    ],
+    "backend": [
+      { "name": "Node.js", "img": "/skills/nodejs.webp" },
+      { "name": "Express.js", "img": "/skills/expressjs.webp" }
+    ],
+    "programming languages": [
+      { "name": "JavaScript", "img": "/skills/javascript.png" },
+      { "name": "Java", "img": "/skills/java.png" },
+      { "name": "Python", "img": "/skills/python.png" },
+      { "name": "C", "img": "/skills/C.png" }
+    ],
+    "databases": [
+      { "name": "MongoDB", "img": "/skills/mongodb.png" },
+      { "name": "MySQL", "img": "/skills/mysql.webp" },
+      { "name": "Supabase", "img": "/skills/supabase.webp" }
+    ],
+    "tools": [
+      { "name": "Git", "img": "/skills/git.png" },
+      { "name": "Firebase", "img": "/skills/Firebase.png" },
+      { "name": "Figma", "img": "/skills/figma.png" }
+    ]
   }
 }

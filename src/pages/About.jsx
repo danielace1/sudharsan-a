@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Code, Cpu, Rocket, Sparkles } from "lucide-react";
 import data from "../data/data.json";
+import EduExp from "../components/EduExp";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="relative flex flex-col items-center py-10 md:py-12 lg:py-14 px-6 md:px-8 lg:px-20 text-black dark:text-white overflow-hidden bg-white dark:bg-zinc-950 transition-colors duration-300"
+      className="relative flex flex-col items-center py-10 md:py-12 lg:pt-12 lg:pb-20 px-6 md:px-8 lg:px-20 text-black dark:text-white overflow-hidden bg-white/40 dark:bg-zinc-950 transition-colors duration-300"
     >
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
@@ -25,7 +26,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6"
+          className="grid grid-cols-2 gap-4 lg:gap-6"
         >
           <motion.div
             whileHover={{ scale: 1.02 }}
@@ -43,7 +44,7 @@ const About = () => {
           >
             <Cpu className="w-8 h-8 mb-3 text-purple-600 dark:text-purple-400" />
             <p className="text-gray-700 dark:text-gray-300 text-sm font-semibold">
-              Exploring new tech
+              Exploring new tech<span className="md:hidden">nologies</span>
             </p>
           </motion.div>
 
@@ -74,12 +75,12 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-left space-y-5 lg:space-y-6 text-base lg:text-lg leading-relaxed"
+          className="text-center md:text-left space-y-5 lg:space-y-6 text-base lg:text-lg leading-relaxed"
         >
           <p>
             Hi, I’m{" "}
             <span className="font-semibold text-cyan-600 dark:text-cyan-400">
-              {data.profile.name}
+              {data.profile.name} A
             </span>
             . I’m a{" "}
             <span className="font-semibold text-purple-600 dark:text-purple-400">
@@ -101,6 +102,8 @@ const About = () => {
           </p>
         </motion.div>
       </div>
+
+      <EduExp />
     </section>
   );
 };

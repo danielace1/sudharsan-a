@@ -4,6 +4,7 @@ import ParallaxStars from "./components/ParallaxStars";
 import GradientBackground from "./components/GradientBackground";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Skills from "./pages/Skills/Skills";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <main className="relative z-10">
         <Home />
         <About />
+        <Skills />
       </main>
     </div>
   );
