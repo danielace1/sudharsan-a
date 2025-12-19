@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { GraduationCap, Briefcase, ArrowUpRight } from "lucide-react";
-import data from "../data/data.json";
+import data from "../../data/data.json";
 
 const EduExp = () => {
   return (

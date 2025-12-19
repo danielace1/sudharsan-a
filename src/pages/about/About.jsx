@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Code, Cpu, Rocket, Sparkles } from "lucide-react";
-import data from "../data/data.json";
-import EduExp from "../components/EduExp";
+import data from "../../data/data.json";
+import EduExp from "./EduExp";
 
 const About = () => {
   return (

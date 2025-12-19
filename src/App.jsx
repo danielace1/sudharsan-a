@@ -3,8 +3,8 @@ import TheNavbar from "./components/TheNavbar";
 import ParallaxStars from "./components/ParallaxStars";
 import GradientBackground from "./components/GradientBackground";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Skills from "./pages/Skills/Skills";
+import About from "./pages/about/About";
+import Skills from "./pages/skills/Skills";
 
 const App = () => {
   return (
