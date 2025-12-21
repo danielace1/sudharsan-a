@@ -35,14 +35,3 @@ body {
 .active-nav.active {
   @apply text-black dark:text-white;
 }
-
-@keyframes border-spin {
-  to {
-    --border-angle: 360deg;
-  }
-}
-
-.animate-border {
-  --border-angle: 0deg;
-  animation: border-spin 10s linear infinite;
-}

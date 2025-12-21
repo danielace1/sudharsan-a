@@ -4,6 +4,7 @@ import ParallaxStars from "./components/ParallaxStars";
 import GradientBackground from "./components/GradientBackground";
 import Home from "./pages/Home";
 import About from "./pages/about/About";
+import Projects from "./pages/Projects";
 import Skills from "./pages/skills/Skills";
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Home />
         <About />
         <Skills />
+        <Projects />
       </main>
     </div>
   );
