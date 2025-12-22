@@ -96,7 +96,7 @@
       "image": "/projects/ai-interview-mocker.png",
       "stack": ["Next.js", "Gemini AI", "Speech-to-Text", "Neon DB"],
       "type": "Full Stack",
-      "desc": "An AI-powered quiz platform that lets educators create quizzes and provides students with real-time evaluation and AI-assisted feedback.",
+      "desc": "An AI-powered mock interview platform with realistic question generation and instant feedback to help users improve their interview skills.",
       "live": "https://quest-ai-eight.vercel.app/",
       "github": "https://github.com/danielace1/ai-mock-interview"
     },
