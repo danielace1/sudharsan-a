@@ -87,16 +87,7 @@ const Home = () => {
 
         <a
           href={data.buttons.contact.link}
-          className="group flex items-center justify-center gap-2 px-6 py-3 
-               rounded-full 
-               bg-white/10 dark:bg-black/10 
-               backdrop-blur-md 
-               border border-gray-200 dark:border-gray-700 
-               text-gray-800 dark:text-gray-200 
-               font-medium 
-               shadow-md 
-               transition-all duration-300 
-               hover:scale-105 hover:border-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300"
+          className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 font-medium shadow-md transition-all duration-300 hover:scale-105 hover:border-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300"
         >
           <Mail className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" />
           {data.buttons.contact.label}

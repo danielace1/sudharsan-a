@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-20"
+      className="relative py-10 md:pt-14 md:pb-20 px-6 md:px-12 lg:px-20"
     >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ const Skills = () => {
       </p>
 
       {/* Tabs */}
-      <div className="flex flex-wrap justify-center gap-4 mb-10 md:mb-12">
+      <div className="flex flex-wrap justify-center gap-4 mb-10 md:mb-14">
         {categories.map((cat) => (
           <button
             key={cat}

@@ -1,13 +1,13 @@
 {
   "profile": {
     "name": "Sudharsan",
-    "role": "Full-Stack Developer",
+    "role": "Junior Full-Stack Developer",
     "description": "I’m a Full-Stack Developer passionate about building modern and user-friendly web applications. I love turning ideas into smooth digital experiences."
   },
   "buttons": {
     "work": {
       "label": "Explore My Work",
-      "link": "#work"
+      "link": "#projects"
     },
     "contact": {
       "label": "Let’s Connect",
@@ -63,7 +63,7 @@
       { "name": "HTML", "img": "/skills/html.png" },
       { "name": "CSS", "img": "/skills/css.png" },
       { "name": "JavaScript", "img": "/skills/javascript.png" },
-      { "name": "React", "img": "/skills/reactjs.png" },
+      { "name": "React.js", "img": "/skills/reactjs.png" },
       { "name": "Next.js", "img": "/skills/nextjs.webp" },
       { "name": "Tailwind CSS", "img": "/skills/tailwindcss.png" }
     ],
@@ -80,12 +80,70 @@
     "databases": [
       { "name": "MongoDB", "img": "/skills/mongodb.png" },
       { "name": "MySQL", "img": "/skills/mysql.webp" },
-      { "name": "Supabase", "img": "/skills/supabase.webp" }
+      { "name": "Supabase", "img": "/skills/supabase.webp" },
+      { "name": "Neon DB", "img": "/skills/neon.png" }
     ],
     "tools": [
       { "name": "Git", "img": "/skills/git.png" },
       { "name": "Firebase", "img": "/skills/Firebase.png" },
       { "name": "Figma", "img": "/skills/figma.png" }
     ]
-  }
+  },
+
+  "projects": [
+    {
+      "title": "AI Interview Mocker",
+      "image": "/projects/ai-interview-mocker.png",
+      "stack": ["Next.js", "Gemini AI", "Speech-to-Text", "Neon DB"],
+      "type": "Full Stack",
+      "desc": "An AI-powered quiz platform that lets educators create quizzes and provides students with real-time evaluation and AI-assisted feedback.",
+      "live": "https://quest-ai-eight.vercel.app/",
+      "github": "https://github.com/danielace1/ai-mock-interview"
+    },
+    {
+      "title": "Fusion Mart",
+      "image": "/projects/fusion-mart-ecom.png",
+      "stack": ["MERN", "JWT", "Admin Panel", "Upstash"],
+      "type": "E-Commerce",
+      "desc": "A full-featured e-commerce platform with authentication, product management, and  seamless shopping experience built on the MERN stack.",
+      "live": "https://fusion-mart.onrender.com/",
+      "github": "https://github.com/danielace1/fusion-mart-ecommerce"
+    },
+    {
+      "title": "Quiz Craze",
+      "image": "/projects/quiz-craze.png",
+      "stack": ["React", "TailwindCSS", "Firebase", "Groq AI"],
+      "type": "Full Stack",
+      "desc": "A smart quiz platform that enables educators to create quizzes and allows students to take them with real-time evaluation and AI-assisted features.",
+      "live": "https://quiz-craze-pi.vercel.app/",
+      "github": "https://github.com/danielace1/quiz-app-for-college"
+    },
+    {
+      "title": "CineBite",
+      "image": "/projects/cinebite.png",
+      "stack": ["React", "Shadcn UI", "TMDB API", "Supabase"],
+      "type": "Frontend",
+      "desc": "A modern movie discovery app to explore trending movies and TV shows, view detailed information, and manage a personalized watchlist.",
+      "live": "https://cinebite-movie-app.vercel.app/",
+      "github": "https://github.com/danielace1/cinebite-movie-app"
+    },
+    {
+      "title": "Blossom Blog",
+      "image": "/projects/blossom-blog.png",
+      "stack": ["MERN", "Clerk", "TanStack Query", "React Quill"],
+      "type": "Full Stack",
+      "desc": "A feature-rich blogging platform with role-based access, content management, and interactive user engagement built using modern web technologies.",
+      "live": "https://blossom-blog-app.onrender.com/",
+      "github": "https://github.com/danielace1/blossom-blog-app"
+    },
+    {
+      "title": "Meet Sync",
+      "image": "/projects/meetsync.png",
+      "stack": ["MERN", "Google Auth", "Google Calendar", "Cronjob"],
+      "type": "Full Stack",
+      "desc": "A meeting management application that integrates with Google Calendar to schedule, sync, and manage meetings efficiently.",
+      "live": "https://meetsync-alpha.vercel.app/",
+      "github": "https://github.com/danielace1/meetsync"
+    }
+  ]
 }
