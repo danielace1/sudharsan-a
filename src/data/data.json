@@ -29,10 +29,10 @@
   ],
   "experience": [
     {
-      "title": "JavaScript Full-Stack Engineer Intern",
+      "title": "JavaScript Fullstack Engineer Intern",
       "mode": "(Remote)",
       "companylink": "https://cyberdudenetworks.com/",
-      "subtitle": "Cyberdude Networks Pvt. Ltd.",
+      "subtitle": "CyberDude Networks Pvt. Ltd.",
       "time": "Sep 2023 - Feb 2024",
       "points": [
         "Learned full-stack development using the MERN stack",
@@ -45,8 +45,8 @@
     {
       "title": "Backend Developer Intern",
       "mode": "(Remote)",
-      "companylink": "https://www.linkedin.com/company/zen-hook/",
-      "subtitle": "Zen Hook",
+      "companylink": "https://www.zenhook.in/",
+      "subtitle": "ZenHook",
       "time": "Sep 2024 - Nov 2024",
       "points": [
         "Developed RESTful APIs using Node.js and MySQL",
@@ -62,10 +62,10 @@
     "frontend": [
       { "name": "HTML", "img": "/skills/html.png" },
       { "name": "CSS", "img": "/skills/css.png" },
+      { "name": "Tailwind CSS", "img": "/skills/tailwindcss.png" },
       { "name": "JavaScript", "img": "/skills/javascript.png" },
       { "name": "React.js", "img": "/skills/reactjs.png" },
-      { "name": "Next.js", "img": "/skills/nextjs.webp" },
-      { "name": "Tailwind CSS", "img": "/skills/tailwindcss.png" }
+      { "name": "Next.js", "img": "/skills/nextjs.webp" }
     ],
     "backend": [
       { "name": "Node.js", "img": "/skills/nodejs.webp" },

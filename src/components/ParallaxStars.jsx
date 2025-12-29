@@ -18,10 +18,10 @@ const ParallaxStars = () => {
   return (
     <group ref={group}>
       <Stars
-        radius={200}
-        depth={80}
-        count={7000}
-        factor={4}
+        radius={120}
+        depth={60}
+        count={18000}
+        factor={6}
         saturation={0}
         fade
         speed={1}

@@ -1,7 +1,16 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Code2, Database, Wrench, Braces } from "lucide-react";
 import Orb from "./Orb";
 import data from "../../data/data.json";
+
+const categoryIcons = {
+  frontend: Code2,
+  backend: Braces,
+  databases: Database,
+  "programming languages": Code2,
+  tools: Wrench,
+};
 
 const Skills = () => {
   const categories = Object.keys(data.skills);
@@ -28,22 +37,30 @@ const Skills = () => {
 
       {/* Tabs */}
       <div className="flex flex-wrap justify-center gap-4 mb-10 md:mb-14">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setActive(cat)}
-            className={`
-              px-5 py-2 rounded-full text-sm font-medium transition-all cursor-pointer
-              ${
-                active === cat
-                  ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-md"
-                  : "bg-blue-300/20 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-blue-300/40 dark:hover:bg-gray-700"
-              }
-            `}
-          >
-            {cat}
-          </button>
-        ))}
+        {categories.map((cat) => {
+          const id = cat.toLowerCase();
+          const Icon = categoryIcons[id];
+
+          return (
+            <motion.button
+              key={cat}
+              onClick={() => setActive(cat)}
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              className={`
+          flex items-center px-5 py-2 rounded-full text-sm font-medium transition-all cursor-pointer
+          ${
+            active === cat
+              ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/20"
+              : "bg-blue-300/20 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-blue-300/40 dark:hover:bg-gray-700"
+          }
+        `}
+            >
+              <Icon className="w-4 h-4 mr-1.5" />
+              {cat}
+            </motion.button>
+          );
+        })}
       </div>
 
       {/* Skills */}

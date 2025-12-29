@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { Briefcase, Mail, ChevronDown } from "lucide-react";
 import data from "../data/data.json";
 
@@ -79,7 +79,7 @@ const Home = () => {
       >
         <a
           href={data.buttons.work.link}
-          className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20"
+          className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:scale-105 hover:shadow-xl"
         >
           <Briefcase className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-1" />
           {data.buttons.work.label}
@@ -95,7 +95,7 @@ const Home = () => {
       </motion.div>
 
       {/* Scrolldown */}
-      <Link to="about" smooth={true} duration={600} offset={-50}>
+      <ScrollLink to="about" smooth={true} duration={600} offset={-50}>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
@@ -103,7 +103,7 @@ const Home = () => {
         >
           <ChevronDown className="w-8 h-8 text-cyan-400 dark:text-pink-400 drop-shadow-lg" />
         </motion.div>
-      </Link>
+      </ScrollLink>
     </section>
   );
 };

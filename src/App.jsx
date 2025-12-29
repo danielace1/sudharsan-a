@@ -12,14 +12,14 @@ const App = () => {
     <div className="relative min-h-screen bg-white dark:bg-black text-black dark:text-white overflow-hidden">
       <TheNavbar />
 
-      <div className="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-700">
-        <Canvas camera={{ position: [0, 0, 3], fov: 75 }}>
-          <ParallaxStars />
-        </Canvas>
-      </div>
-
       <div className="absolute inset-0 dark:hidden transition-opacity duration-700">
         <GradientBackground />
+      </div>
+
+      <div className="absolute inset-0 opacity-100 dark:opacity-100 transition-opacity duration-700">
+        <Canvas camera={{ position: [0, 0, 80], fov: 100 }}>
+          <ParallaxStars />
+        </Canvas>
       </div>
 
       <main className="relative z-10">

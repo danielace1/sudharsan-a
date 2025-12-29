@@ -5,27 +5,23 @@ import { ExternalLink, Github } from "lucide-react";
 const ProjectCard = ({ project, index }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.96 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        delay: index * 0.04,
-        type: "spring",
-        stiffness: 120,
-        damping: 14,
-      }}
+      initial={{ opacity: 0, y: 5 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.08, duration: 0.6 }}
+      viewport={{ once: true }}
       whileHover={{ y: -4 }}
-      className="group relative rounded-2xl overflow-hidden bg-white/80 dark:bg-white/5 border border-gray-300/60 dark:border-gray-700/60 backdrop-blur-xl transition-all duration-300"
+      className="group relative rounded-2xl overflow-hidden w-full h-full bg-white/80 dark:bg-white/5 border border-gray-300/60 dark:border-gray-700/60 backdrop-blur-xl transition-all duration-300"
     >
       <div className="relative h-48 overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-        <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 opacity-0 group-hover:opacity-100 transition">
+        <div className="hidden absolute bottom-4 left-4 right-4 sm:flex items-center gap-3 opacity-0 group-hover:opacity-100 transition">
           <a
             href={project.live}
             target="_blank"
@@ -44,7 +40,7 @@ const ProjectCard = ({ project, index }) => {
         </div>
       </div>
 
-      <div className="p-5 space-y-3">
+      <div className="p-4 sm:px-5 space-y-3">
         <div className="flex items-center justify-between gap-2">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
             {project.title}
@@ -69,6 +65,25 @@ const ProjectCard = ({ project, index }) => {
             </span>
           ))}
         </div>
+      </div>
+
+      {/* Mobile Actions */}
+      <div className="flex sm:hidden space-x-5 items-center px-4 sm:px-5 pb-3.5">
+        <a
+          href={project.live}
+          target="_blank"
+          className="inline-flex items-center gap-1 text-sm font-medium text-cyan-600 dark:text-cyan-400 hover:underline"
+        >
+          <ExternalLink className="w-3.5 h-3.5" /> Live
+        </a>
+
+        <a
+          href={project.github}
+          target="_blank"
+          className="inline-flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-gray-100 hover:underline"
+        >
+          <Github className="w-3.5 h-3.5" /> Code
+        </a>
       </div>
     </motion.div>
   );
