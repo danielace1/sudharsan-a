@@ -145,5 +145,33 @@
       "live": "https://meetsync-alpha.vercel.app/",
       "github": "https://github.com/danielace1/meetsync"
     }
+  ],
+
+  "socials": [
+    {
+      "icon": "Github",
+      "link": "https://github.com/danielace1",
+      "color": "hover:text-black dark:hover:text-gray-100"
+    },
+    {
+      "icon": "Linkedin",
+      "link": "https://www.linkedin.com/in/a-sudharsan/",
+      "color": "hover:text-cyan-500"
+    },
+    {
+      "icon": "Instagram",
+      "link": "https://instagram.com/sudharsan_daniel",
+      "color": "hover:text-pink-500"
+    },
+    {
+      "icon": "Facebook",
+      "link": "https://www.facebook.com/sudharsandaniel01/",
+      "color": "hover:text-blue-500"
+    },
+    {
+      "icon": "Twitter",
+      "link": "https://x.com/Sudharsandaniel",
+      "color": "hover:text-sky-400"
+    }
   ]
 }

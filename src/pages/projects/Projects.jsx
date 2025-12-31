@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative py-10 md:pt-14 md:pb-20 px-6 md:px-12 lg:px-20 bg-white/40 dark:bg-zinc-950 transition-colors duration-300"
+      className="relative py-10 md:pt-14 md:pb-12 px-6 md:px-12 lg:px-20 bg-white/40 dark:bg-zinc-950 transition-colors duration-300"
     >
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
@@ -34,12 +34,12 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
-        className="flex justify-center items-center mt-8 md:mt-14"
+        className="flex justify-center items-center mt-8 md:mt-12"
       >
         <a
           href="https://github.com/danielace1?tab=repositories"
           target="_blank"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500  text-white font-medium hover:opacity-90 transition"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500  text-white font-medium hover:opacity-90 transition-all duration-300 hover:scale-105"
         >
           View More <ArrowRight className="size-4" />
         </a>
