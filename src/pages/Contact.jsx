@@ -197,7 +197,7 @@ const Contact = () => {
                 id="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full mt-2 px-3 py-2 rounded-xl bg-gray-100/90 dark:bg-gray-800 border border-gray-400/60 dark:border-gray-600 text-sm resize-none focus:border focus:border-pink-500 outline-none transition"
+                className="w-full mt-2 px-3 py-2 rounded-xl placeholder:text-gray-400 bg-gray-100/90 dark:bg-gray-800 border border-gray-400/60 dark:border-gray-600 text-sm resize-none focus:border focus:border-pink-500 outline-none transition"
                 required
               />
             </div>
