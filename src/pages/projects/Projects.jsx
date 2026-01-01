@@ -19,7 +19,7 @@ const Projects = () => {
         Projects
       </motion.h2>
 
-      <p className="text-center text-gray-600 dark:text-gray-400 mb-8 text-sm md:text-base">
+      <p className="text-center text-gray-600 dark:text-gray-400 mb-8 text-sm md:text-base italic">
         Where ideas become impactful web solutions.
       </p>
 

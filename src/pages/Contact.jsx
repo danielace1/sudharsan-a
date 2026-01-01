@@ -8,7 +8,6 @@ import {
   Linkedin,
   Instagram,
   Facebook,
-  Twitter,
   Check,
   X,
 } from "lucide-react";
@@ -19,7 +18,7 @@ const icons = {
   Linkedin,
   Instagram,
   Facebook,
-  Twitter,
+  X,
 };
 
 const Contact = () => {
@@ -60,7 +59,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative py-14 px-6 md:px-12 lg:px-20 mb-5"
+      className="relative py-10 px-6 md:px-12 lg:px-20 mb-5"
     >
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
@@ -72,7 +71,7 @@ const Contact = () => {
         Let’s Connect
       </motion.h2>
 
-      <div className="mt-10 md:mt-12 max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-start mx-auto">
+      <div className="mt-8 md:mt-12 max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-start mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -84,7 +83,7 @@ const Contact = () => {
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white">
               Get in Touch
             </h2>
-            <p className="mt-5 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="mt-3 md:mt-4 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
               Open to collaborations, career opportunities, and building
               impactful user-centric products.
             </p>
@@ -205,7 +204,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full py-2.5 rounded-xl text-sm font-medium text-white bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-500 hover:opacity-80 transition-opacity cursor-pointer"
+              className="w-full py-2.5 rounded-xl text-sm font-medium text-white bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-500 hover:opacity-85 dark:hover:opacity-80 transition-opacity cursor-pointer"
             >
               Send Message
             </button>

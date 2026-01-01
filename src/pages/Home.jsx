@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-import { Briefcase, Mail, ChevronDown } from "lucide-react";
+import { Mail, ChevronDown, FileText } from "lucide-react";
 import data from "../data/data.json";
 
 const Home = () => {
@@ -78,20 +78,26 @@ const Home = () => {
         className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-6 justify-center z-10"
       >
         <a
-          href={data.buttons.work.link}
-          className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+          href={"/sudharsan_resume.pdf"}
+          target="_blank"
+          rel="noopener noreferrer"
+          download={"sudharsan_resume.pdf"}
+          className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
         >
-          <Briefcase className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-1" />
-          {data.buttons.work.label}
+          <FileText className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-1" />
+          View Resume
         </a>
 
-        <a
-          href={data.buttons.contact.link}
-          className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 font-medium shadow-md transition-all duration-300 hover:scale-105 hover:border-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300"
+        <ScrollLink
+          to={data.buttons.contact.link}
+          smooth={true}
+          duration={600}
+          offset={-30}
+          className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 font-medium shadow-md transition-all duration-300 hover:scale-105 hover:border-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300 cursor-pointer"
         >
           <Mail className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" />
           {data.buttons.contact.label}
-        </a>
+        </ScrollLink>
       </motion.div>
 
       {/* Scrolldown */}

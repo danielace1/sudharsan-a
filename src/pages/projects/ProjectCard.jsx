@@ -72,7 +72,7 @@ const ProjectCard = ({ project, index }) => {
         <a
           href={project.live}
           target="_blank"
-          className="inline-flex items-center gap-1 text-sm font-medium text-cyan-600 dark:text-cyan-400 hover:underline"
+          className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ExternalLink className="w-3.5 h-3.5" /> Live
         </a>
