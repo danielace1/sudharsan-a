@@ -27,7 +27,7 @@ const Footer = () => {
         {[
           {
             Icon: Globe,
-            url: "https://sudharsan-a.dev",
+            url: "https://sudharsan-a.me",
             hover: "hover:text-cyan-500",
           },
           {
@@ -112,7 +112,7 @@ const Footer = () => {
           transition={{ type: "spring", stiffness: 300, damping: 15 }}
           className="relative inline-block font-semibold bg-gradient-to-r from-cyan-500 to-purple-500 text-transparent bg-clip-text cursor-pointer after:content-[''] after:absolute after:left-0 after:-bottom-[1px] after:w-full after:h-[1px] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 after:bg-gradient-to-r after:from-cyan-500 after:to-purple-500 hover:after:scale-x-100"
         >
-          <a href="https://sudharsan-a.dev">Sudharsan A</a>
+          <a href="https://sudharsan-a.me">Sudharsan A</a>
         </motion.span>
       </p>
     </footer>
