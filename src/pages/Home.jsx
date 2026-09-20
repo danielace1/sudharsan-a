@@ -15,7 +15,7 @@ const Home = () => {
         transition={{ duration: 1 }}
         className="text-center z-10"
       >
-        <div className="container 2xl:mx-auto relative w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-48 lg:h-48 mx-auto mt-6 mb-6">
+        <div className="container 2xl:mx-auto relative w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 mx-auto mt-6 mb-5">
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
@@ -51,21 +51,21 @@ const Home = () => {
           <span className="font-semibold text-green-600 dark:text-green-400">
             {data.profile.role}
           </span>{" "}
-          passionate about building{" "}
+          crafting{" "}
           <span className="text-fuchsia-600 dark:text-fuchsia-400 font-medium">
-            modern
+            scalable
           </span>{" "}
           and{" "}
           <span className="text-pink-600 dark:text-pink-400 font-medium">
-            user-friendly
+            reliable
           </span>{" "}
-          web applications. I love turning{" "}
+          web applications with{" "}
           <span className="text-cyan-600 dark:text-cyan-400 font-semibold">
-            ideas
+            intuitive interfaces
           </span>{" "}
-          into{" "}
+          and{" "}
           <span className="text-purple-600 dark:text-purple-400 font-medium">
-            smooth digital experiences
+            robust backend systems
           </span>
           .
         </motion.p>
@@ -75,17 +75,17 @@ const Home = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.8 }}
-        className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-6 justify-center z-10"
+        className="mt-8 flex flex-col sm:flex-row gap-6 justify-center z-10"
       >
         <a
           href={"/sudharsan_resume.pdf"}
           target="_blank"
           rel="noopener noreferrer"
           download={"sudharsan_resume.pdf"}
-          className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+          className="group flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
         >
           <FileText className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-1" />
-          View Resume
+          Download CV
         </a>
 
         <ScrollLink
@@ -93,7 +93,7 @@ const Home = () => {
           smooth={true}
           duration={600}
           offset={-30}
-          className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 font-medium shadow-md transition-all duration-300 hover:scale-105 hover:border-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300 cursor-pointer"
+          className="group flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 font-medium shadow-md transition-all duration-300 hover:scale-105 hover:border-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300 cursor-pointer"
         >
           <Mail className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" />
           {data.buttons.contact.label}
@@ -105,7 +105,7 @@ const Home = () => {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer"
+          className="absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer"
         >
           <ChevronDown className="w-8 h-8 text-cyan-400 dark:text-pink-400 drop-shadow-lg" />
         </motion.div>

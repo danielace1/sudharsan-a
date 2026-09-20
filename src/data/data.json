@@ -2,7 +2,7 @@
   "profile": {
     "name": "Sudharsan",
     "role": "Junior Full-Stack Developer",
-    "description": "I’m a Full-Stack Developer passionate about building modern and user-friendly web applications. I love turning ideas into smooth digital experiences."
+    "description": "Fullstack developer building practical web applications across frontend and backend systems. Experienced in developing APIs, managing data workflows, and delivering reliable solutions through real-world projects."
   },
   "buttons": {
     "work": {
@@ -27,6 +27,7 @@
       "time": "June 2020 - Apr 2023"
     }
   ],
+
   "experience": [
     {
       "title": "JavaScript Fullstack Engineer Intern",
@@ -35,10 +36,10 @@
       "subtitle": "CyberDude Networks Pvt. Ltd.",
       "time": "Sep 2023 - Feb 2024",
       "points": [
-        "Learned full-stack development using the MERN stack",
-        "Built a complete MERN application",
-        "Designed responsive UI applications",
-        "Secured 3rd place in a team hackathon (Job Portal - CRUD)"
+        "Built full-stack applications using the MERN stack.",
+        "Developed responsive and reusable UI components.",
+        "Implemented CRUD features and application logic.",
+        "Secured 3rd place in a team hackathon by building a job portal."
       ],
       "link": "https://github.com/danielace1/cyberdude-challenges"
     },
@@ -49,10 +50,10 @@
       "subtitle": "ZenHook",
       "time": "Sep 2024 - Nov 2024",
       "points": [
-        "Developed RESTful APIs using Node.js and MySQL",
-        "Implemented product listing with CRUD functionality",
-        "Contributed to a responsive frontend application",
-        "Deployed and optimized production applications"
+        "Developed RESTful APIs using Node.js and MySQL.",
+        "Implemented CRUD operations for product and order management.",
+        "Integrated backend services with frontend applications.",
+        "Deployed and optimized backend services for production."
       ],
       "link": "https://www.jdsinternationalexport.com"
     }
